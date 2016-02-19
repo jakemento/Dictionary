@@ -36,9 +36,9 @@ public class Word {
     }
   }
 //
-//   public static void clear() {
-//     instances.clear();
-//   }
+  public static void clear() {
+    instances.clear();
+  }
 //
 //   public ArrayList<Phone> getPhones() {
 //     return mPhones;

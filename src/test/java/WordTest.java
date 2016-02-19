@@ -33,19 +33,19 @@ public class WordTest {
     assertEquals(Word.all().size(), testWord.getId());
   }
 //
-//   @Test
-//   public void find_returnsContactByItsID_testContact() {
-//     Contact testContact = new Contact("test", "test2", "August");
-//     Contact testContact2 = new Contact("test2", "test3", "October");
-//     assertEquals(testContact2, Contact.find(testContact2.getId()));
-//   }
+  @Test
+  public void find_returnsWordByItsID_testWord() {
+    Word testWord = new Word("dog");
+    Word testWord2 = new Word("cat");
+    assertEquals(testWord2, Word.find(testWord2.getId()));
+  }
 //
-//   @Test
-//   public void find_throwsExceptionWhenIDIsOutOfBounds() {
-//     Contact testContact = new Contact("test", "test2", "August");
-//     Contact testContact2 = new Contact("test2", "test3", "October");
-//     assertTrue(Contact.find(999) == null);
-//   }
+  @Test
+  public void find_throwsExceptionWhenIDIsOutOfBounds() {
+    Word testWord = new Word("dog");
+    Word testWord2 = new Word("cat");
+    assertTrue(Word.find(999) == null);
+  }
 //
 //   @Test
 //   public void clear_clearsMemoryOfContact(){
@@ -67,33 +67,5 @@ public class WordTest {
 //     Phone testPhone = new Phone("cell", "505", "555-5555");
 //     testContact.addPhone(testPhone);
 //     assertTrue(testContact.getPhones().contains(testPhone));
-//   }
-//
-//   @Test
-//   public void getEmails_initiallyReturnsEmptyArrayList() {
-//     Contact testContact = new Contact("test2", "test3", "October");
-//     assertTrue(testContact.getEmails() instanceof ArrayList);
-//   }
-//
-//   @Test
-//   public void addEmail_addsEmailObjectToEmailArrayList() {
-//     Contact testContact = new Contact("test2", "test3", "October");
-//     Email testEmail = new Email("personal", "test@gmail.com");
-//     testContact.addEmail(testEmail);
-//     assertTrue(testContact.getEmails().contains(testEmail));
-//   }
-//
-//   @Test
-//   public void getAddresses_initiallyReturnsEmptyArrayList() {
-//     Contact testContact = new Contact("test2", "test3", "October");
-//     assertTrue(testContact.getAddresses() instanceof ArrayList);
-//   }
-//
-//   @Test
-//   public void addAddress_addsAddressObjectToAddressArrayList() {
-//     Contact testContact = new Contact("test2", "test3", "October");
-//     Address testAddress = new Address("home", "123 E Burnside", "Portland", "OR", 97219);
-//     testContact.addAddress(testAddress);
-//     assertTrue(testContact.getAddresses().contains(testAddress));
 //   }
 }
