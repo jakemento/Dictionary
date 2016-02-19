@@ -5,14 +5,11 @@
 #### By _ Jacob Steinberg
 
 ## Description
-
-__
+_This is a site that allows you to create a dictionary, then populate that dictionary with words and multiple definitions for said words.
 
 ## Setup/Installation Requirements
 
 * _Clone this repository_
-* _Install the [Java SDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and [Java SRE](http://www.java.com/en/)._
-* _[Install gradle](http://codetutr.com/2013/03/23/how-to-install-gradle/)_
 * _Open a terminal, navigate to the root of the cloned directory, and enter "gradle run"._
 * _Open localhost:4567 in a browser._
 
