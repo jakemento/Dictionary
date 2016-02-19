@@ -4,28 +4,20 @@ public class Definition {
   private static ArrayList<Definition> instances = new ArrayList<Definition>();
   private String mMeaning;
   private int mId;
-//
+
   public Definition(String meaning) {
     mMeaning = meaning;
     instances.add(this);
     mId = instances.size();
   }
-//
-//   public String getType() {
-//     return mType;
-//   }
-//
-//   public String getAreaCode() {
-//     return mAreaCode;
-//   }
-//
-//   public String getPhoneNumber() {
-//     return mPhoneNumber;
-//   }
-//
-//   public static ArrayList<Phone> all() {
-//     return instances;
-//   }
+
+  public String getMeaning() {
+    return mMeaning;
+  }
+
+  public static ArrayList<Definition> all() {
+    return instances;
+  }
 //
 //   public int getId() {
 //     return mId;

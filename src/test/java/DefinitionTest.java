@@ -10,33 +10,20 @@ public class DefinitionTest {
     Definition testDefinition = new Definition("a person who writes computer programs.");
     assertEquals(true, testDefinition instanceof Definition);
   }
-//
-//   @Test
-//   public void getType_instantiatesCorrectly_cell() {
-//     Phone testPhone = new Phone("cell", "503", "555-5555");
-//     assertEquals("cell", testPhone.getType());
-//   }
-//
-//   @Test
-//   public void getAreaCode_returnsAreaCode_503() {
-//     Phone testPhone = new Phone("cell", "503", "555-5555");
-//     assertEquals("503", testPhone.getAreaCode());
-//   }
-//
-//   @Test
-//   public void getPhoneNumber_returnsPhoneNumber_555_5555() {
-//     Phone testPhone = new Phone("cell", "503", "555-5555");
-//     assertEquals("555-5555", testPhone.getPhoneNumber());
-//   }
-//
-//   @Test
-//   public void all_returnsAllPhoneEntries() {
-//     Phone testPhone = new Phone("cell", "503", "555-5555");
-//     Phone testPhone2 = new Phone("home", "555", "555-5555");
-//     assertTrue(Phone.all().contains(testPhone));
-//     assertTrue(Phone.all().contains(testPhone2));
-//   }
-//
+
+  @Test
+  public void getMeaning_instantiatesCorrectly_aPersonWhoWritesComputerPrograms() {
+    Definition testDefinition = new Definition("a person who writes computer programs.");
+    assertEquals("a person who writes computer programs.", testDefinition.getMeaning());
+  }
+  @Test
+  public void all_returnsAllDefinitionEntries() {
+    Definition testDefinition = new Definition("a person who writes computer programs.");
+    Definition testDefinition2 = new Definition("a device that automatically controls the operation of something in accordance with a prescribed program.");
+    assertTrue(Definition.all().contains(testDefinition));
+    assertTrue(Definition.all().contains(testDefinition2));
+  }
+
 //   @Test
 //   public void getId_returnsId_Id() {
 //     Phone testPhone = new Phone("cell", "503", "555-5555");
