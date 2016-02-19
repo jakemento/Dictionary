@@ -24,29 +24,29 @@ public class DefinitionTest {
     assertTrue(Definition.all().contains(testDefinition2));
   }
 
-//   @Test
-//   public void getId_returnsId_Id() {
-//     Phone testPhone = new Phone("cell", "503", "555-5555");
-//     assertEquals(Phone.all().size(), testPhone.getId());
-//   }
-//
-//   @Test
-//   public void find_returnsPhoneObjectWithId_testPhone() {
-//     Phone testPhone = new Phone("cell", "503", "555-5555");
-//     assertEquals(testPhone, Phone.find(testPhone.getId()));
-//   }
-//
-//   @Test
-//   public void find_throwsExceptionWhenIdIsNotFound() {
-//     Phone testPhone = new Phone("cell", "503", "555-5555");
-//     assertTrue(Phone.find(999) == null);
-//   }
-//
-//   @Test
-//   public void clear_removesAllPhoneObjects() {
-//     Phone testPhone = new Phone("cell", "503", "555-5555");
-//     Phone testPhone2 = new Phone("home", "555", "555-5555");
-//     Phone.clear();
-//     assertEquals(0, Phone.all().size());
-//   }
+  @Test
+  public void getId_returnsId_Id() {
+    Definition testDefinition = new Definition("a person who writes computer programs.");
+    assertEquals(Definition.all().size(), testDefinition.getId());
+  }
+
+  @Test
+  public void find_returnsDefinitionObjectWithId_testDefinition() {
+    Definition testDefinition = new Definition("a person who writes computer programs.");
+    assertEquals(testDefinition, Definition.find(testDefinition.getId()));
+  }
+
+  @Test
+  public void find_throwsExceptionWhenIdIsNotFound() {
+    Definition testDefinition = new Definition("a person who writes computer programs.");
+    assertTrue(Definition.find(999) == null);
+  }
+
+  @Test
+  public void clear_removesAllDefinitionObjects() {
+    Definition testDefinition = new Definition("a person who writes computer programs.");
+    Definition testDefinition2 = new Definition("a device that automatically controls the operation of something in accordance with a prescribed program.");
+    Definition.clear();
+    assertEquals(0, Definition.all().size());
+  }
 }
