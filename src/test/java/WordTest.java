@@ -2,16 +2,16 @@ import org.junit.*;
 import static org.junit.Assert.*;
 import java.util.ArrayList;
 
-// public class ContactTest {
-//
-//   @Rule
-//   public ClearRule clearRule = new ClearRule();
-//
-//   @Test
-//   public void contact_instantiatesCorrectly() {
-//     Contact testContact = new Contact("test", "test2", "August");
-//     assertEquals(true, testContact instanceof Contact);
-//   }
+public class WordTest {
+
+  // @Rule
+  // public ClearRule clearRule = new ClearRule();
+
+  @Test
+  public void Word_instantiatesCorrectly() {
+    Word testWord = new Word("dog");
+    assertEquals(true, testWord instanceof Word);
+  }
 //
 //   @Test
 //   public void getFirstName_returnsFirstName_test() {
@@ -114,4 +114,4 @@ import java.util.ArrayList;
 //     testContact.addAddress(testAddress);
 //     assertTrue(testContact.getAddresses().contains(testAddress));
 //   }
-// }
+}

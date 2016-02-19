@@ -46,4 +46,4 @@ import java.util.ArrayList;
 //   public static void clear() {
 //     instances.clear();
 //   }
-}
+// }

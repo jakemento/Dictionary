@@ -1,25 +1,18 @@
 import java.util.ArrayList;
 
-// public class Contact {
-//   private static ArrayList<Contact> instances = new ArrayList<Contact>();
-//   private ArrayList<Phone> mPhones;
-//   private ArrayList<Email> mEmails;
-//   private ArrayList<Address> mAddresses;
-//   private String mFirstName;
-//   private String mLastName;
-//   private String mBirthMonth;
-//   private int mId;
-//
-//   public Contact(String firstName, String lastName, String birthMonth) {
-//     mFirstName = firstName;
-//     mLastName = lastName;
-//     mBirthMonth = birthMonth;
-//     instances.add(this);
-//     mId = instances.size();
-//     mPhones = new ArrayList<Phone>();
-//     mEmails = new ArrayList<Email>();
-//     mAddresses = new ArrayList<Address>();
-//   }
+public class Word {
+  private static ArrayList<Word> instances = new ArrayList<Word>();
+  // private ArrayList<Definition> mDefinitions;
+
+  private String mNameOfWord;
+  private int mId;
+
+  public Word(String wordName) {
+    mNameOfWord = wordName;
+    instances.add(this);
+    mId = instances.size();
+    // mDefinitions = new ArrayList<Definition>();
+  }
 //
 //   public String getFirstName() {
 //     return mFirstName;
@@ -80,4 +73,4 @@ import java.util.ArrayList;
 //   public void addAddress(Address address) {
 //     mAddresses.add(address);
 //   }
-// }
+}
