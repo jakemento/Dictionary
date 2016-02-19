@@ -14,21 +14,11 @@ public class Word {
     // mDefinitions = new ArrayList<Definition>();
   }
 //
-//   public String getFirstName() {
-//     return mFirstName;
-//   }
+  public String getWordName() {
+    return mNameOfWord;
+  }
 //
-//   public String getLastName() {
-//     return mLastName;
-//   }
 //
-//   public String getFullName() {
-//     return mFirstName + " " + mLastName;
-//   }
-//
-//   public String getBirthMonth() {
-//     return mBirthMonth;
-//   }
 //
 //   public static ArrayList<Contact> all() {
 //     return instances;
@@ -56,21 +46,5 @@ public class Word {
 //
 //   public void addPhone(Phone phone) {
 //     mPhones.add(phone);
-//   }
-//
-//   public ArrayList<Email> getEmails() {
-//     return mEmails;
-//   }
-//
-//   public void addEmail(Email email) {
-//     mEmails.add(email);
-//   }
-//
-//   public ArrayList<Address> getAddresses() {
-//     return mAddresses;
-//   }
-//
-//   public void addAddress(Address address) {
-//     mAddresses.add(address);
 //   }
 }

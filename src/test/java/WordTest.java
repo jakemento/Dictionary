@@ -13,11 +13,11 @@ public class WordTest {
     assertEquals(true, testWord instanceof Word);
   }
 //
-//   @Test
-//   public void getFirstName_returnsFirstName_test() {
-//     Contact testContact = new Contact("test", "test2", "August");
-//     assertEquals("test", testContact.getFirstName());
-//   }
+  @Test
+  public void getWordName_returnsWordsName_test() {
+    Word testWord = new Word("dog");
+    assertEquals("dog", testWord.getWordName());
+  }
 //
 //   @Test
 //   public void getLastName_returnsLastName_test2() {
