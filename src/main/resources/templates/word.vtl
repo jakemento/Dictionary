@@ -1,16 +1,16 @@
 <div class="jumbotron">
   <h1>Dictionary</h1>
-  <h2>$word.getWordName()</h3>
+  <h2>$word.getWordName()</h2>
 </div>
 <div class="row">
   <div class="col-md-4">
     <a class="btn btn-primary" href="/$word.getId()/definitions/new">Add a new Definition</a>
+    <a class="btn btn-primary" href="/new">Add a new Word</a>
     #foreach($definition in $word.getDefinitions())
     <div class="well">
-      <h3>Definition:</h3><h4>$definition.getMeaning()</h4>
+      <h3>Definition:</h3><h4>$definition.getMeaning()</h3>
     </div>
     #end
   </div>
 
-<br>
 <a class="btn btn-info form-control" href="/">Go back to Dictionary</a>
