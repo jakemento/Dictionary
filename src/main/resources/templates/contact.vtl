@@ -1,0 +1,45 @@
+<div class="jumbotron">
+  <h1>Your Address Book</h1>
+  <h3>$contact.getFullName()</h3>
+  <h3>Birth Month: $contact.getBirthMonth()</h3>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <a class="btn btn-primary" href="/contacts/$contact.getId()/phones/new">Add a new Phone</a>
+    <h2>Phone:</h2>
+    #foreach($phone in $contact.getPhones())
+    <div class="well">
+      <h3>Type:</h3><h4>$phone.getType()</h4>
+      <h3>Number:</h3><h4>$phone.getAreaCode() $phone.getPhoneNumber()</h4>
+    </div>
+    #end
+  </div>
+  <div class="col-md-4">
+  <a class="btn btn-warning" href="/contacts/$contact.getId()/emails/new">Add a new Email</a>
+    <h2>Email:</h2>
+    #foreach($email in $contact.getEmails())
+    <div class="well">
+      <h3>Type:</h3> <h4>$email.getType()</h4>
+      <h3>Email Address:</h3> <h4>$email.getEmailAddress()</h4>
+    </div>
+    #end
+  </div>
+  <div class="col-md-4">
+  <a class="btn btn-success" href="/contacts/$contact.getId()/addresses/new">Add a new Address</a>
+    <h2>Address:</h2>
+    #foreach($address in $contact.getAddresses())
+    <div class="well">
+      <h3>Type:</h3><h4>$address.getType()</h4>
+      <h3>Street:</h3><h4>$address.getStreet()</h4>
+      <h3>City:</h3><h4>$address.getCity()</h4>
+      <h3>State:</h3><h4>$address.getState()</h4>
+      <h3>Zip Code:</h3><h4>$address.getZip()</h4>
+    </div>
+    #end
+  </div>
+</div>
+
+
+
+<br>
+<a class="btn btn-info form-control" href="/contacts">View all contacts</a>
