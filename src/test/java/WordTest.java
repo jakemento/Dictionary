@@ -18,38 +18,20 @@ public class WordTest {
     Word testWord = new Word("dog");
     assertEquals("dog", testWord.getWordName());
   }
+
+  @Test
+  public void all_returnsAllWords() {
+    Word testWord = new Word("dog");
+    Word testWord2 = new Word("cat");
+    assertTrue(Word.all().contains(testWord));
+    assertTrue(Word.all().contains(testWord2));
+  }
 //
-//   @Test
-//   public void getLastName_returnsLastName_test2() {
-//     Contact testContact = new Contact("test", "test2", "August");
-//     assertEquals("test2", testContact.getLastName());
-//   }
-//
-//   @Test
-//   public void getFullName_returnsFullName_test() {
-//     Contact testContact = new Contact("test", "test2", "August");
-//     assertEquals("test test2", testContact.getFullName());
-//   }
-//
-//   @Test
-//   public void getBirthMonth_returnsBirthMonth_August() {
-//     Contact testContact = new Contact("test", "test2", "August");
-//     assertEquals("August", testContact.getBirthMonth());
-//   }
-//
-//   @Test
-//   public void all_returnsAllContacts() {
-//     Contact testContact = new Contact("test", "test2", "August");
-//     Contact testContact2 = new Contact("test2", "test3", "October");
-//     assertTrue(Contact.all().contains(testContact));
-//     assertTrue(Contact.all().contains(testContact2));
-//   }
-//
-//   @Test
-//   public void getId_returnsIdOfContact_id() {
-//     Contact testContact = new Contact("test", "test2", "August");
-//     assertEquals(Contact.all().size(), testContact.getId());
-//   }
+  @Test
+  public void getId_returnsIdOfWord_id() {
+    Word testWord = new Word("dog");
+    assertEquals(Word.all().size(), testWord.getId());
+  }
 //
 //   @Test
 //   public void find_returnsContactByItsID_testContact() {
