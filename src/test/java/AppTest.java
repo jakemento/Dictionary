@@ -17,11 +17,11 @@ public class AppTest extends FluentTest {
   public static ServerRule server = new ServerRule();
 
 
-  // @Test
-  // public void rootTest() {
-  //   goTo("http://localhost:4567/");
-  //   assertThat(pageSource()).contains("Add New Contact");
-  // }
+  @Test
+  public void rootTest() {
+    goTo("http://localhost:4567/");
+    assertThat(pageSource()).contains("Add New Word");
+  }
   //
   // @Test
   // public void contactFormTest() {
