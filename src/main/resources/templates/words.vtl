@@ -2,7 +2,7 @@
   <h1>Dictionary</h1>
 </div>
 
-<a class="btn btn-primary" href="/words/new">Add New Word</a>
+<a class="btn btn-primary" href="/">Add New Word</a>
 #foreach($word in $words)
- <h3><a href="/words/$word.getId()">$word.getWordName()</a></h3>
+ <h3><a href="/$word.getId()">$word.getWordName()</a></h3>
 #end

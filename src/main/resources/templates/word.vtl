@@ -4,7 +4,7 @@
 </div>
 <div class="row">
   <div class="col-md-4">
-    <a class="btn btn-primary" href="/words/$word.getId()/definitions/new">Add a new Definition</a>
+    <a class="btn btn-primary" href="/$word.getId()/definitions/new">Add a new Definition</a>
     <h2>Definition:</h2>
     #foreach($definition in $word.getDefinitions())
     <div class="well">
@@ -14,4 +14,4 @@
   </div>
 
 <br>
-<a class="btn btn-info form-control" href="/words">View all words</a>
+<a class="btn btn-info form-control" href="/">Go back to Dictionary</a>
