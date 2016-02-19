@@ -39,22 +39,18 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("Dog");
   }
   //
-  // @Test
-  // public void contactsDisplayMultipleTest() {
-  //   goTo("http://localhost:4567/");
-  //   click("a", withText("Add New Contact"));
-  //   fill("#firstName").with("Bob");
-  //   fill("#lastName").with("Smith");
-  //   fill("#birthMonth").with("September");
-  //   submit(".btn");
-  //   click("a", withText("Add New Contact"));
-  //   fill("#firstName").with("Alice");
-  //   fill("#lastName").with("Jones");
-  //   fill("#birthMonth").with("October");
-  //   submit(".btn");
-  //   assertThat(pageSource()).contains("Bob Smith");
-  //   assertThat(pageSource()).contains("Alice Jones");
-  // }
+  @Test
+  public void wordsDisplayMultipleTest() {
+    goTo("http://localhost:4567/");
+    click("a", withText("Add New Word"));
+    fill("#wordName").with("Dog");
+    submit(".btn");
+    click("a", withText("Add New Word"));
+    fill("#wordName").with("Cat");
+    submit(".btn");
+    assertThat(pageSource()).contains("Dog");
+    assertThat(pageSource()).contains("Cat");
+  }
   //
   // @Test
   // public void contactPageDisplayTest() {
