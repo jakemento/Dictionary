@@ -22,24 +22,22 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/");
     assertThat(pageSource()).contains("Add New Word");
   }
+
+  @Test
+  public void wordFormTest() {
+    goTo("http://localhost:4567/");
+    click("a", withText("Add New Word"));
+    assertThat(pageSource()).contains("Add a word");
+  }
   //
-  // @Test
-  // public void contactFormTest() {
-  //   goTo("http://localhost:4567/");
-  //   click("a", withText("Add New Contact"));
-  //   assertThat(pageSource()).contains("Add a contact");
-  // }
-  //
-  // @Test
-  // public void contactsDisplayTest() {
-  //   goTo("http://localhost:4567/");
-  //   click("a", withText("Add New Contact"));
-  //   fill("#firstName").with("Bob");
-  //   fill("#lastName").with("Smith");
-  //   fill("#birthMonth").with("September");
-  //   submit(".btn");
-  //   assertThat(pageSource()).contains("Bob Smith");
-  // }
+  @Test
+  public void wordsDisplayTest() {
+    goTo("http://localhost:4567/");
+    click("a", withText("Add New Word"));
+    fill("#wordName").with("Dog");
+    submit(".btn");
+    assertThat(pageSource()).contains("Dog");
+  }
   //
   // @Test
   // public void contactsDisplayMultipleTest() {

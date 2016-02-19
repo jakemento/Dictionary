@@ -1,19 +1,17 @@
 <div class="jumbotron">
-  <h1>Your Address Book</h1>
-  <h3>$contact.getFullName()</h3>
-  <h3>Birth Month: $contact.getBirthMonth()</h3>
+  <h1>Dictionary</h1>
+  <h3>$word.getWordName()</h3>
 </div>
 <div class="row">
   <div class="col-md-4">
-    <a class="btn btn-primary" href="/contacts/$contact.getId()/phones/new">Add a new Phone</a>
-    <h2>Phone:</h2>
-    #foreach($phone in $contact.getPhones())
+    <a class="btn btn-primary" href="/words/$word.getId()/definitions/new">Add a new Definition</a>
+    <h2>Definition:</h2>
+    #foreach($definition in $word.getDefinitions())
     <div class="well">
-      <h3>Type:</h3><h4>$phone.getType()</h4>
-      <h3>Number:</h3><h4>$phone.getAreaCode() $phone.getPhoneNumber()</h4>
+      <h3>Definition:</h3><h4>$definition.getMeaning()</h4>
     </div>
     #end
   </div>
 
 <br>
-<a class="btn btn-info form-control" href="/contacts">View all contacts</a>
+<a class="btn btn-info form-control" href="/words">View all words</a>

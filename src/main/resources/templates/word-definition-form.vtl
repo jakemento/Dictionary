@@ -1,20 +1,16 @@
 <div class="jumbotron">
-  <h1>Your Address Book</h1>
-  <h3>Add a phone number</h3>
+  <h1>Dictionary</h1>
+  <h3>Add a definition</h3>
 </div>
 
-<p>Add a phone number here:</p>
+<p>Add a definition</p>
 
-<form action="/phone-new" method="post">
-  <input id="contactId" name="contactId" type="hidden" value="$contact.getId()">
-  <label for="phoneType">Phone Type (Work, Cell, Etc)</label>
-  <input id="phoneType" name="phoneType" type="text">
+<form action="/definition-new" method="post">
+  <input id="wordId" name="wordId" type="hidden" value="$word.getId()">
 
-  <label for="areaCode">Area Code</label>
-  <input id="areaCode" name="areaCode" type="text">
 
-  <label for="phoneNumber">Phone Number</label>
-  <input id="phoneNumber" name="phoneNumber" type="text">
+  <label for="wordMeaning">Definition</label>
+  <input id="wordMeaning" name="wordMeaning" type="text">
 
-  <button type="submit" class="btn btn-success">Add Phone</button>
+  <button type="submit" class="btn btn-success">Add Definition</button>
 </form>

@@ -11,72 +11,67 @@ public class App {
 
     get("/", (request,response) -> {
       HashMap<String,Object> model = new HashMap<String,Object>();
-
       model.put("template", "templates/index.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
     get("/words/new", (request,response) -> {
       HashMap<String,Object> model = new HashMap<String,Object>();
-
       model.put("template", "templates/word-form.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
     post("/words", (request,response) -> {
       HashMap<String,Object> model = new HashMap<String,Object>();
-
       String wordName = request.queryParams("wordName");
       Word newWord = new Word(wordName);
+      model.put("words", Word.all());
+      model.put("template", "templates/words.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    get("/words", (request,response) -> {
+      HashMap<String,Object> model = new HashMap<String,Object>();
+
       model.put("words", Word.all());
 
       model.put("template", "templates/words.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
-    //
-    // get("/contacts", (request,response) -> {
-    //   HashMap<String,Object> model = new HashMap<String,Object>();
-    //
-    //   model.put("contacts", Contact.all());
-    //
-    //   model.put("template", "templates/contacts.vtl");
-    //   return new ModelAndView(model, layout);
-    // }, new VelocityTemplateEngine());
-    //
-    // get("/contacts/:id", (request,response) -> {
-    //   HashMap<String,Object> model = new HashMap<String,Object>();
-    //
-    //   Contact contact = Contact.find(Integer.parseInt(request.params(":id")));
-    //   model.put("contact", contact);
-    //
-    //   model.put("template", "templates/contact.vtl");
-    //   return new ModelAndView(model, layout);
-    // }, new VelocityTemplateEngine());
-    //
-    // get("/contacts/:id/phones/new", (request,response) -> {
-    //   HashMap<String,Object> model = new HashMap<String,Object>();
-    //
-    //   Contact contact = Contact.find(Integer.parseInt(request.params(":id")));
-    //   model.put("contact", contact);
-    //
-    //   model.put("template", "templates/contact-phone-form.vtl");
-    //   return new ModelAndView(model, layout);
-    // }, new VelocityTemplateEngine());
-    //
-    // post("/phone-new", (request,response) -> {
-    //   HashMap<String,Object> model = new HashMap<String,Object>();
-    //
-    //   String type = request.queryParams("phoneType");
-    //   String areaCode = request.queryParams("areaCode");
-    //   String phoneNumber = request.queryParams("phoneNumber");
-    //   Contact contact = Contact.find(Integer.parseInt(request.queryParams("contactId")));
-    //   Phone newPhone = new Phone(type, areaCode, phoneNumber);
-    //   Contact.find(contact.getId()).addPhone(newPhone);
-    //   model.put("contact", contact);
-    //
-    //   model.put("template", "templates/contact.vtl");
-    //   return new ModelAndView(model, layout);
-    // }, new VelocityTemplateEngine());
+
+    get("/words/:id", (request,response) -> {
+      HashMap<String,Object> model = new HashMap<String,Object>();
+
+      Word word = Word.find(Integer.parseInt(request.params(":id")));
+      model.put("word", word);
+
+      model.put("template", "templates/word.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    get("/words/:id/definitions/new", (request,response) -> {
+      HashMap<String,Object> model = new HashMap<String,Object>();
+
+      Word word = Word.find(Integer.parseInt(request.params(":id")));
+      model.put("word", word);
+
+      model.put("template", "templates/word-definition-form.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    post("/definition-new", (request,response) -> {
+      HashMap<String,Object> model = new HashMap<String,Object>();
+
+      String meaning = request.queryParams("wordMeaning");
+
+      Word word = Word.find(Integer.parseInt(request.queryParams("wordId")));
+      Definition newDefinition = new Definition(meaning);
+      Word.find(word.getId()).addDefinition(newDefinition);
+      model.put("word", word);
+
+      model.put("template", "templates/word.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
 
   }
 
