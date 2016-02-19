@@ -29,7 +29,7 @@ public class AppTest extends FluentTest {
     click("a", withText("Add New Word"));
     assertThat(pageSource()).contains("Add a word");
   }
-  //
+
   @Test
   public void wordsDisplayTest() {
     goTo("http://localhost:4567/");
@@ -38,7 +38,7 @@ public class AppTest extends FluentTest {
     submit(".btn");
     assertThat(pageSource()).contains("Dog");
   }
-  //
+
   @Test
   public void wordsDisplayMultipleTest() {
     goTo("http://localhost:4567/");
@@ -51,65 +51,26 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("Dog");
     assertThat(pageSource()).contains("Cat");
   }
-  //
-  // @Test
-  // public void contactPageDisplayTest() {
-  //   goTo("http://localhost:4567/");
-  //   click("a", withText("Add New Contact"));
-  //   fill("#firstName").with("Bob");
-  //   fill("#lastName").with("Smith");
-  //   fill("#birthMonth").with("September");
-  //   submit(".btn");
-  //   click("a", withText("Bob Smith"));
-  //   assertThat(pageSource()).contains("September");
-  // }
-  //
-  // @Test
-  // public void phoneAddTest() {
-  //   goTo("http://localhost:4567/contacts/new");
-  //   fill("#firstName").with("Bob");
-  //   fill("#lastName").with("Smith");
-  //   fill("#birthMonth").with("September");
-  //   submit(".btn");
-  //   click("a", withText("Bob Smith"));
-  //   click("a", withText("Add a new Phone"));
-  //   fill("#phoneType").with("Work");
-  //   fill("#areaCode").with("555");
-  //   fill("#phoneNumber").with("555-5555");
-  //   submit(".btn");
-  //   assertThat(pageSource()).contains("Work");
-  // }
-  //
-  // @Test
-  // public void emailAddTest() {
-  //   goTo("http://localhost:4567/contacts/new");
-  //   fill("#firstName").with("Bob");
-  //   fill("#lastName").with("Smith");
-  //   fill("#birthMonth").with("September");
-  //   submit(".btn");
-  //   click("a", withText("Bob Smith"));
-  //   click("a", withText("Add a new Email"));
-  //   fill("#emailType").with("Work");
-  //   fill("#emailAddress").with("test@gmail.com");
-  //   submit(".btn");
-  //   assertThat(pageSource()).contains("test@gmail.com");
-  // }
-  //
-  // @Test
-  // public void addressAddTest() {
-  //   goTo("http://localhost:4567/contacts/new");
-  //   fill("#firstName").with("Bob");
-  //   fill("#lastName").with("Smith");
-  //   fill("#birthMonth").with("September");
-  //   submit(".btn");
-  //   click("a", withText("Bob Smith"));
-  //   click("a", withText("Add a new Email"));
-  //   fill("#addressType").with("Work");
-  //   fill("#street").with("123 E Burnside");
-  //   fill("#city").with("Portland");
-  //   fill("#state").with("OR");
-  //   fill("#zip").with("97214");
-  //   submit(".btn");
-  //   assertThat(pageSource()).contains("123 E Burnside");
-  // }
+
+  @Test
+  public void wordPageDisplayTest() {
+    goTo("http://localhost:4567/");
+    click("a", withText("Add New Word"));
+    fill("#wordName").with("Dog");
+    submit(".btn");
+    assertThat(pageSource()).contains("Dog");
+  }
+
+  @Test
+  public void definitionAddTest() {
+    goTo("http://localhost:4567/");
+    click("a", withText("Add New Word"));
+    fill("#wordName").with("dog");
+    submit(".btn");
+    click("a", withText("dog"));
+    click("a", withText("Add a new Definition"));
+    fill("#wordMeaning").with("a canine animal friend");
+    submit(".btn");
+    assertThat(pageSource()).contains("a canine animal friend");
+  }
 }
