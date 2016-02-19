@@ -1,19 +1,15 @@
 import java.util.ArrayList;
 
-// public class Phone {
-//   private static ArrayList<Phone> instances = new ArrayList<Phone>();
-//   private String mType;
-//   private String mAreaCode;
-//   private String mPhoneNumber;
-//   private int mId;
+public class Definition {
+  private static ArrayList<Definition> instances = new ArrayList<Definition>();
+  private String mMeaning;
+  private int mId;
 //
-//   public Phone(String type, String areaCode, String number) {
-//     mType = type;
-//     mAreaCode = areaCode;
-//     mPhoneNumber = number;
-//     instances.add(this);
-//     mId = instances.size();
-//   }
+  public Definition(String meaning) {
+    mMeaning = meaning;
+    instances.add(this);
+    mId = instances.size();
+  }
 //
 //   public String getType() {
 //     return mType;
@@ -46,4 +42,4 @@ import java.util.ArrayList;
 //   public static void clear() {
 //     instances.clear();
 //   }
-// }
+}

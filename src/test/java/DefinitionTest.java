@@ -1,15 +1,15 @@
 import org.junit.*;
 import static org.junit.Assert.*;
 
-// public class PhoneTest {
-//   @Rule
-//   public ClearRule clearRule = new ClearRule();
-//
-//   @Test
-//   public void phone_instantiatesCorrectly() {
-//     Phone testPhone = new Phone("cell", "503", "555-5555");
-//     assertEquals(true, testPhone instanceof Phone);
-//   }
+public class DefinitionTest {
+  @Rule
+  public ClearRule clearRule = new ClearRule();
+
+  @Test
+  public void definition_instantiatesCorrectly() {
+    Definition testDefinition = new Definition("a person who writes computer programs.");
+    assertEquals(true, testDefinition instanceof Definition);
+  }
 //
 //   @Test
 //   public void getType_instantiatesCorrectly_cell() {
@@ -62,4 +62,4 @@ import static org.junit.Assert.*;
 //     Phone.clear();
 //     assertEquals(0, Phone.all().size());
 //   }
-// }
+}
