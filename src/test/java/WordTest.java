@@ -54,18 +54,18 @@ public class WordTest {
     Word.clear();
     assertEquals(Word.all().size(), 0);
   }
-//
-//   @Test
-//   public void getPhones_initiallyReturnsEmptyArrayList() {
-//     Contact testContact = new Contact("test2", "test3", "October");
-//     assertTrue(testContact.getPhones() instanceof ArrayList);
-//   }
-//
-//   @Test
-//   public void addPhone_addsPhoneObjectToPhoneArrayList() {
-//     Contact testContact = new Contact("test2", "test3", "October");
-//     Phone testPhone = new Phone("cell", "505", "555-5555");
-//     testContact.addPhone(testPhone);
-//     assertTrue(testContact.getPhones().contains(testPhone));
-//   }
+
+  @Test
+  public void getDefinitions_initiallyReturnsEmptyArrayList() {
+    Word testWord = new Word("dog");
+    assertTrue(testWord.getDefinitions() instanceof ArrayList);
+  }
+
+  @Test
+  public void addDefinition_addsDefinitinoObjectToDefinitionArrayList() {
+    Word testWord = new Word("otter");
+    Definition testDefinition = new Definition("a playful river-dwelling creature");
+    testWord.addDefinition(testDefinition);
+    assertTrue(testWord.getDefinitions().contains(testDefinition));
+  }
 }
