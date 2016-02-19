@@ -5,7 +5,7 @@
 #### By _ Jacob Steinberg
 
 ## Description
-_This is a site that allows you to create a dictionary, then populate that dictionary with words and multiple definitions for said words.
+This is a site that allows you to create a dictionary, then populate that dictionary with words and multiple definitions for said words.
 
 ## Setup/Installation Requirements
 
